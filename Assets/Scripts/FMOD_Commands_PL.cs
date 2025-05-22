@@ -6,7 +6,7 @@ public class FMOD_Commands : MonoBehaviour
 {
     #region EVENT EMITTER
     // EVENT EMITTER
-	[SerializedField]
+	//[SerializeField]
     public FMODUnity.StudioEventEmitter tavernEmitter; // Deklaracja publicznego pola, które przechowuje referencję do event emittera na scenie.
     #endregion
 
@@ -19,7 +19,7 @@ public class FMOD_Commands : MonoBehaviour
     {
         // jednorazowe odtworzenie
         FMODUnity.RuntimeManager.PlayOneShot(footstepsEvent); // Odtwarza event jednokrotnie bez zarządzania jego instancją.
-        
+
         // podstawowe zarządzanie eventem
         FootstepsSound = FMODUnity.RuntimeManager.CreateInstance(footstepsEvent); // Tworzy nową instancję eventu Footsteps.
         FootstepsSound.setParameterByNameWithLabel("Footsteps_surface", "Stone"); // Ustawia parametr o nazwie "Footsteps_surface" na wartość "Stone".
@@ -36,7 +36,7 @@ public class FMOD_Commands : MonoBehaviour
         FootstepsSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         FootstepsSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FootstepsSound.release();
-    }
+    } 
     #endregion
 
     #region SNAPSHOT
