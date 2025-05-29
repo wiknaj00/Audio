@@ -7,7 +7,6 @@ using UnityEngine.XR;
 
 public class Footsteps : MonoBehaviour
 {
-    // 
     FMOD.Studio.EventInstance FootstepsSound;
     FMOD.Studio.EventInstance JumpSound;
     FMOD.Studio.EventInstance LandSound;
